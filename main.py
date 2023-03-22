@@ -13,7 +13,12 @@ def encoder(password): #encoder done by Al Fahad
         encodepass += digit
     return encodepass
 
-
+def decoder(password):  # decoder done by JP
+    decodedpass = ""
+    for num in password:
+        digit = str((int(num) - 3))
+        decodedpass += digit
+    return decodedpass
 
 
 
@@ -26,22 +31,16 @@ def main():
         if option == "1":
             password = input("Please enter your password to encode: ")
             encoded_pass = encoder(password)
-            print(encoded_pass)
             print("Your password has been encoded and stored\n")
 
         if option == "2":
-            pass
+            decoder_pass = decoder(encoded_pass)
+            print(f"The encoded password is {encoded_pass}, and the original password is {decoder_pass}\n")
+
         if option == "3":
             break
 
 
 
 if __name__ == "__main__":
-    main()
-
-
-
-
-
-if __name__ == '__main__':
     main()
