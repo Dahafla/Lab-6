@@ -6,7 +6,7 @@ def menu():
           "2. Decode\n"
           "3. Quit\n")
 
-def encoder(password):
+def encoder(password): #encoder done by Al Fahad
     encodepass = ""
     for num in password:
         digit = str((int(num) + 3))
